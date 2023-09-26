@@ -49,13 +49,13 @@
           </tr>
           </thead>
           <tbody>
-          <tr v-for="(article, index) in articles" :key="index">
-            <td class="title"><a>{{ article.title }}</a></td>
-            <td class="hashtag">{{ article.hashtag }}</td>
-            <td class="user-id">{{ article.userId }}</td>
-            <td class="created-at">
+          <tr v-for="(dataList, index) in list" :key="index">
+            <td class="title"><a>{{ dataList.title }}</a></td>
+            <td class="hashtag">{{ dataList.content }}</td>
+            <td class="user-id">{{ dataList.id }}</td>
+            <!-- <td class="created-at">
               <time>{{ article.createdAt }}</time>
-            </td>
+            </td> -->
           </tr>
           </tbody>
         </table>
@@ -80,39 +80,45 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
-  
-  const searchType = ref('제목');
-  const searchValue = ref('');
-  const articles = ref([
-    {
-      title: '첫글',
-      hashtag: '#java',
-      userId: 'adas',
-      createdAt: '2022-01-01',
-    },
-    {
-      title: '두번째글',
-      hashtag: '#spring',
-      userId: 'fsdfsa',
-      createdAt: '2022-01-02',
-    },
-    {
-      title: '세번째글',
-      hashtag: '#java',
-      userId: 'vsdvsd',
-      createdAt: '2022-01-03',
-    },
-    // 기타 게시물 데이터 추가
-  ]);
-  
-  const search = () => {
-    // 검색 기능을 구현하려면 이 곳에 검색 로직을 추가하세요.
-  };
-  
-  const writeArticle = () => {
-    // 글쓰기 기능을 구현하려면 이 곳에 글쓰기 로직을 추가하세요.
-  };
+
+    import { ref , onMounted} from 'vue';
+    
+    
+const requestBody = ref({});
+const list = ref([]);
+
+
+
+   const fnGetList = () => {
+  $axios
+    .get($serverUrl + '/board', {
+      params: requestBody.value,
+      headers: {},
+    })
+    .then((res) => {
+      list.value = res.data;
+    })
+    .catch((err) => {
+      if (err.message.indexOf('Network Error') > -1) {
+        alert('네트워크가 원활하지 않습니다.\n잠시 후 다시 시도해주세요.');
+      }
+    });
+};
+
+onMounted(() => {
+  fnGetList();
+});
+
+
+    
+    const search = () => {
+      // 검색 기능을 구현하려면 이 곳에 검색 로직을 추가하세요.
+    };
+    
+    const writeArticle = () => {
+      // 글쓰기 기능을 구현하려면 이 곳에 글쓰기 로직을 추가하세요.
+    };
+
   </script>
   
   <style scoped>
