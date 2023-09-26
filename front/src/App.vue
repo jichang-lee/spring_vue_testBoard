@@ -1,7 +1,9 @@
 <template>
 
-  <navbarMenu></navbarMenu>
-  <router-view></router-view>
+<div class="app-container">
+    <navbarMenu></navbarMenu>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script setup>
@@ -19,4 +21,5 @@ import navbarMenu from './components/navbarMenu.vue'
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>

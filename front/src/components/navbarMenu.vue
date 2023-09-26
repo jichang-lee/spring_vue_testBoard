@@ -2,7 +2,7 @@
   <div class="sidebar-container">
     <a href="/" class="logo-title">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">제목</span>
+      <span class="fs-4">toy</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
@@ -57,6 +57,7 @@
   overflow-y: auto; /* 내용이 넘칠 경우 스크롤 생성 */
   border-radius: 10px;
   margin-left: 13px;
+  
 }
 .nav-item {
   

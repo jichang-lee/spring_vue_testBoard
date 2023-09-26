@@ -1,14 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import boardList from '/src/components/boardList.vue'
+import boardRegister from '/src/components/boardRegister.vue'
 
 const routes = [
  
   {
     path: '/board',
     name: 'board',
-   component : boardList
+   component : boardList,
+  },
+  {
+    path: '/board/register',
+    name: 'register',
+   component : boardRegister,
   }
+
+  
 ]
 
 const router = createRouter({

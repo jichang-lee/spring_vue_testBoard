@@ -88,19 +88,19 @@
     {
       title: '첫글',
       hashtag: '#java',
-      userId: 'Uno',
+      userId: 'adas',
       createdAt: '2022-01-01',
     },
     {
       title: '두번째글',
       hashtag: '#spring',
-      userId: 'Uno',
+      userId: 'fsdfsa',
       createdAt: '2022-01-02',
     },
     {
       title: '세번째글',
       hashtag: '#java',
-      userId: 'Uno',
+      userId: 'vsdvsd',
       createdAt: '2022-01-03',
     },
     // 기타 게시물 데이터 추가
