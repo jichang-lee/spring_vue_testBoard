@@ -3,7 +3,7 @@ import App from './App.vue'
 
 const routes = [
   {
-    path: '/aa',
+    path: '/',
     name: 'App',
     component: App
   },
