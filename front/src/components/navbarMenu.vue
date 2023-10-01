@@ -2,7 +2,7 @@
   <div class="sidebar-container">
     <a href="/" class="logo-title">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">toy</span>
+      <span class="fs-4">toyss</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">

@@ -81,17 +81,18 @@
   
   <script setup>
 
+    import axios from 'axios';
     import { ref , onMounted} from 'vue';
     
     
-const requestBody = ref({});
-const list = ref([]);
+    const requestBody = ref({});
+    const list = ref([]);
 
 
 
    const fnGetList = () => {
-  $axios
-    .get($serverUrl + '/board', {
+  axios
+    .get('localhost:8099' + '/board', {
       params: requestBody.value,
       headers: {},
     })
