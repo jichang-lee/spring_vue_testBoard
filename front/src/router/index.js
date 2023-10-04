@@ -6,8 +6,8 @@ import boardRegister from '/src/components/boardRegister.vue'
 const routes = [
  
   {
-    path: '/board',
-    name: 'board',
+    path: '/board/list',
+    name: 'boardList',
    component : boardList,
   },
   {
