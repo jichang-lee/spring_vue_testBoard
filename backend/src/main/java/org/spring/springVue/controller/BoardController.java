@@ -16,7 +16,7 @@ public class BoardController {
     private final BoardService boardService;
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/board/list")
+    @GetMapping("/api/board/list")
     public List<BoardDto> boardList(){
        return boardService.boardList();
     }

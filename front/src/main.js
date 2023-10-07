@@ -8,6 +8,5 @@ import axios from 'axios'
 
 const app = createApp(App) 
 app.config.globalProperties.axios = axios;
-app.config.globalProperties.serverUrl = '//localhost:8099';
 app.use(router).mount('#app')
 

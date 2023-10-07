@@ -59,10 +59,9 @@
 
  const fnGetList = () => {
   axios
-    .get("/board/list")
+    .get("/localhost:8099/api/board/list")
     .then((res) => {
       this.list = res.data;
-      console.log('response =====' , list)
     })
     .catch((err) => {
       if (err.message.indexOf('Network Error') > -1) {
@@ -71,11 +70,9 @@
     });
 };
 
-onMounted(() => {
-  fnGetList();
-  console.log(fnGetList())
-});
-
+    onMounted(() => {
+      fnGetList();
+    });
 
   </script>
   
